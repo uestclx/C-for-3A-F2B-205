@@ -1,0 +1,5 @@
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Interface\bin\Debug\Interface.dll
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Interface\bin\Debug\Interface.pdb
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Interface\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Interface\obj\Debug\Interface.dll
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Interface\obj\Debug\Interface.pdb

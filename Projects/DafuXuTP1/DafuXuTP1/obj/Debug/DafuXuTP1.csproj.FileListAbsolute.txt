@@ -1,0 +1,13 @@
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP1\DafuXuTP1\bin\Debug\DafuXuTP1.exe.config
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP1\DafuXuTP1\bin\Debug\DafuXuTP1.exe
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP1\DafuXuTP1\bin\Debug\DafuXuTP1.pdb
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP1\DafuXuTP1\obj\Debug\MainWindow.g.cs
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP1\DafuXuTP1\obj\Debug\App.g.cs
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP1\DafuXuTP1\obj\Debug\DafuXuTP1_MarkupCompile.cache
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP1\DafuXuTP1\obj\Debug\DafuXuTP1_MarkupCompile.lref
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP1\DafuXuTP1\obj\Debug\MainWindow.baml
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP1\DafuXuTP1\obj\Debug\DafuXuTP1.g.resources
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP1\DafuXuTP1\obj\Debug\DafuXuTP1.Properties.Resources.resources
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP1\DafuXuTP1\obj\Debug\DafuXuTP1.csproj.GenerateResource.Cache
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP1\DafuXuTP1\obj\Debug\DafuXuTP1.exe
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP1\DafuXuTP1\obj\Debug\DafuXuTP1.pdb

@@ -1,0 +1,7 @@
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Serveur\obj\Debug\Serveur.exe
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Serveur\obj\Debug\Serveur.pdb
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Serveur\bin\Debug\Serveur.exe
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Serveur\bin\Debug\Serveur.pdb
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Serveur\bin\Debug\Interface.dll
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Serveur\bin\Debug\Interface.pdb
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Serveur\obj\Debug\Serveur.csprojResolveAssemblyReference.cache

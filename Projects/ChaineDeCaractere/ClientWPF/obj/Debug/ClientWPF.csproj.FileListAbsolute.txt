@@ -1,0 +1,16 @@
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\bin\Debug\ClientWPF.exe.config
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\bin\Debug\ClientWPF.exe
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\bin\Debug\ClientWPF.pdb
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\bin\Debug\Interface.dll
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\bin\Debug\Interface.pdb
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\obj\Debug\ClientWPF.csprojResolveAssemblyReference.cache
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\obj\Debug\MainWindow.g.cs
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\obj\Debug\App.g.cs
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\obj\Debug\ClientWPF_MarkupCompile.cache
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\obj\Debug\ClientWPF_MarkupCompile.lref
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\obj\Debug\MainWindow.baml
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\obj\Debug\ClientWPF.g.resources
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\obj\Debug\ClientWPF.Properties.Resources.resources
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\obj\Debug\ClientWPF.csproj.GenerateResource.Cache
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\obj\Debug\ClientWPF.exe
+\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\ClientWPF\obj\Debug\ClientWPF.pdb

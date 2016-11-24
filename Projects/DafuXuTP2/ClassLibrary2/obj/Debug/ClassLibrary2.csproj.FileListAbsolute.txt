@@ -1,0 +1,5 @@
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP2\ClassLibrary2\bin\Debug\ClassLibrary2.dll
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP2\ClassLibrary2\bin\Debug\ClassLibrary2.pdb
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP2\ClassLibrary2\obj\Debug\ClassLibrary2.csprojResolveAssemblyReference.cache
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP2\ClassLibrary2\obj\Debug\ClassLibrary2.dll
+\\campus.enst-bretagne.fr\homes\dshi\visual studio 2015\Projects\DafuXuTP2\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
