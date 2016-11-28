@@ -50,24 +50,37 @@ namespace DafuXuTP1
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Process p = new Process();
-            p.StartInfo = new ProcessStartInfo();
-            p.StartInfo.FileName = "Premier.exe";
-            list.Add(p);
-            this.premier_num++;
-            p.Start();
-            listBox.Items.Add(p.StartInfo.FileName + " " + p.Id);
+            if (this.premier_num < max_instance_num)
+            {
+                Process p = new Process();
+                p.StartInfo = new ProcessStartInfo();
+                p.StartInfo.FileName = "Premier.exe";
+                list.Add(p);
+                this.premier_num++;
+                p.Start();
+                listBox.Items.Add(p.StartInfo.FileName + " " + p.Id);
+            }
+            else {
+                MessageBox.Show("Error: maximum 5 Premier processes.");
+            }
+            
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            Process p = new Process();
-            p.StartInfo = new ProcessStartInfo();
-            p.StartInfo.FileName = "Ballon.exe";
-            list.Add(p);
-            this.ballon_num++;
-            p.Start();
-            listBox.Items.Add(p.StartInfo.FileName + " " + p.Id);
+            if (this.ballon_num < max_instance_num)
+            {
+                Process p = new Process();
+                p.StartInfo = new ProcessStartInfo();
+                p.StartInfo.FileName = "Ballon.exe";
+                list.Add(p);
+                this.ballon_num++;
+                p.Start();
+                listBox.Items.Add(p.StartInfo.FileName + " " + p.Id);
+            }
+            else {
+                MessageBox.Show("Error: maximum 5 Ballon processes.");
+            }
         }
 
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
@@ -146,8 +159,8 @@ namespace DafuXuTP1
 
         private void menu_create_MouseEnter(object sender, RoutedEventArgs e)
         {
-            create_premier.IsEnabled = (this.premier_num < max_instance_num) ? true : false;
-            create_ballon.IsEnabled = (this.ballon_num < max_instance_num) ? true : false;
+            create_premier.FontStyle = (this.premier_num < max_instance_num) ? FontStyles.Normal : FontStyles.Italic;
+            create_ballon.FontStyle = (this.ballon_num < max_instance_num) ? FontStyles.Normal : FontStyles.Italic;
         }
 
         private void menu_delete_MouseEnter(object sender, RoutedEventArgs e)
