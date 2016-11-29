@@ -7,19 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Label x:Name="label" Content="TP1 &#xD;&#xA;Dafu and Xu&#xD;&#xA;This is a simple exemple to &#xD;&#xA;demonstrate C# " HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" Width="189" Height="143" FontFamily="Arial Black"/>
+        <Label x:Name="label" Content="TP2&#xD;&#xA;&#xA;Dafu SHI&#xD;&#xA;Xu LIANG&#xD;&#xA;&#xA;Management of Threads.&#xD;&#xA;&#xD;&#xA;Maximum thread number&#xD;&#xA;is limited to 5 for each&#xD;&#xA;Ballon and Premier " HorizontalAlignment="Left" Margin="5,82,0,0" VerticalAlignment="Top" Width="189" Height="153" FontFamily="Arial Black"/>
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="265" Margin="199,37,0,0" VerticalAlignment="Top" Width="289" />
         <DockPanel HorizontalAlignment="Left" Height="37" LastChildFill="False" VerticalAlignment="Top" Width="507">
             <Menu DockPanel.Dock="Top">
-                <MenuItem Header="Create">
-                    <MenuItem Header="Create Premier" Click="MenuItem_Click"/>
-                    <MenuItem Header="Create Ballon" Click="MenuItem_Click_1"/>
+                <MenuItem x:Name="menu_create" Header="Create" MouseEnter="menu_create_MouseEnter">
+                    <MenuItem x:Name="create_premier" Header="Create Premier" Click="MenuItem_Click"/>
+                    <MenuItem x:Name="create_ballon" Header="Create Ballon" Click="MenuItem_Click_1"/>
                 </MenuItem>
-                <MenuItem Header="Delete">
-                    <MenuItem Header="Delete Last Premier" Click="MenuItem_Click_2" />
-                    <MenuItem Header="Delete Last Ballon" Click="MenuItem_Click_3" />
-                    <MenuItem Header="Delete Last Process" Click="MenuItem_Click_4"/>
-                    <MenuItem Header="Delete All" Click="MenuItem_Click_5"/>
+                <MenuItem x:Name="menu_delete" Header="Delete" MouseEnter="menu_delete_MouseEnter">
+                    <MenuItem x:Name="delete_premier" Header="Delete Last Premier" Click="MenuItem_Click_2" />
+                    <MenuItem x:Name="delete_ballon" Header="Delete Last Ballon" Click="MenuItem_Click_3" />
+                    <MenuItem x:Name="delete_last" Header="Delete Last Process" Click="MenuItem_Click_4"/>
+                    <MenuItem x:Name="delete_all" Header="Delete All" Click="MenuItem_Click_5"/>
                 </MenuItem>
                 <MenuItem Header="Quit">
                     <MenuItem Header="Quit" Click="MenuItem_Click_6" />
