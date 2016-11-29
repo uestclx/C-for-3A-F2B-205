@@ -26,6 +26,8 @@ namespace DafuXuTP2
         List<Thread> list = new List<Thread>();
         Stack<Thread> stackForBallon = new Stack<Thread>();
         Stack<Thread> stackForPremier = new Stack<Thread>();
+        private const int max_process_num = 5;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,20 +35,32 @@ namespace DafuXuTP2
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            Thread threa = new Thread(new ThreadStart(ClassLibrary2.Ballon.CreateBallon().Go));
-            list.Add(threa);
-            stackForBallon.Push(threa);
-            threa.Start();
-            listBox.Items.Add("Ballon "+threa.ManagedThreadId);
+            if (stackForBallon.Count() < max_process_num)
+            {
+                Thread threa = new Thread(new ThreadStart(ClassLibrary2.Ballon.CreateBallon().Go));
+                list.Add(threa);
+                stackForBallon.Push(threa);
+                threa.Start();
+                listBox.Items.Add("Ballon " + threa.ManagedThreadId);
+            } else
+            {
+                MessageBox.Show("Error: maximum 5 Ballon processes.");
+            }
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Thread threa = new Thread(new ThreadStart(ClassLibrary2.NombrePremier.ThreadFunction));
-            list.Add(threa);
-            stackForPremier.Push(threa);
-            threa.Start();
-            listBox.Items.Add("Premier " + threa.ManagedThreadId);
+            if (stackForPremier.Count() < max_process_num)
+            {
+                Thread threa = new Thread(new ThreadStart(ClassLibrary2.NombrePremier.ThreadFunction));
+                list.Add(threa);
+                stackForPremier.Push(threa);
+                threa.Start();
+                listBox.Items.Add("Premier " + threa.ManagedThreadId);
+            } else
+            {
+                MessageBox.Show("Error: maximum 5 Premier processes.");
+            }
         }
 
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
@@ -272,6 +286,20 @@ namespace DafuXuTP2
                 }
             }
             System.Environment.Exit(1);
+        }
+
+        private void menu_create_MouseEnter(object sender, MouseEventArgs e)
+        {
+            create_premier.FontStyle = (stackForPremier.Count() < max_process_num) ? FontStyles.Normal : FontStyles.Italic;
+            create_ballon.FontStyle = (stackForBallon.Count() < max_process_num) ? FontStyles.Normal : FontStyles.Italic;
+        }
+
+        private void menu_delete_MouseEnter(object sender, MouseEventArgs e)
+        {
+            delete_premier.IsEnabled = (stackForPremier.Count() > 0) ? true : false;
+            delete_ballon.IsEnabled = (stackForBallon.Count() > 0) ? true : false;
+            delete_last.IsEnabled = (list.Count() > 0) ? true : false;
+            delete_all.IsEnabled = (list.Count() > 0) ? true : false;
         }
     }
 }
