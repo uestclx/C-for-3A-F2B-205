@@ -9,16 +9,16 @@
     <Grid>
         <DockPanel HorizontalAlignment="Left" Height="37" LastChildFill="False" VerticalAlignment="Top" Width="507">
             <Menu DockPanel.Dock="Top">
-                <MenuItem Header="Login" Click="MenuItem_Click"/>
+                <MenuItem x:Name="loginBotton" Header="Login" Click="MenuItem_Click" IsEnabled="True"/>
                 <MenuItem Name="disconnect" Header="Disconnect" Click="MenuItem_Click_1" IsEnabled="False"/>
             </Menu>
         </DockPanel>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="68" Margin="48,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="373" IsEnabled="False"/>
-        <Button x:Name="button" Content="Send" HorizontalAlignment="Left" Height="39" Margin="475,482,0,0" VerticalAlignment="Top" Width="173" Click="button_Click" IsEnabled="False"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="314" Margin="529,121,0,0" VerticalAlignment="Top" Width="119"/>
-        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="195" Margin="48,121,0,0" VerticalAlignment="Top" Width="373"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="96,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="messageIn" HorizontalAlignment="Left" Height="68" Margin="48,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="373" IsEnabled="False"/>
+        <Button x:Name="sendButton" Content="Send" HorizontalAlignment="Left" Height="39" Margin="475,482,0,0" VerticalAlignment="Top" Width="173" Click="button_Click" IsEnabled="False"/>
+        <ListBox x:Name="userListBox" HorizontalAlignment="Left" Height="314" Margin="529,121,0,0" VerticalAlignment="Top" Width="119"/>
+        <ListBox x:Name="msgListBox" HorizontalAlignment="Left" Height="195" Margin="48,121,0,0" VerticalAlignment="Top" Width="373"/>
+        <TextBox x:Name="unameIn" HorizontalAlignment="Left" Height="23" Margin="96,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="48,346,0,0" TextWrapping="Wrap" Text="Message" VerticalAlignment="Top" Width="121"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="48,45,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="32,42,0,0" TextWrapping="Wrap" Text="User Name" VerticalAlignment="Top"/>
     </Grid>
 </Window>

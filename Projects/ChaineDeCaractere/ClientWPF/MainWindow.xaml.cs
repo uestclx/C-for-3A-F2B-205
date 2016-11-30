@@ -30,6 +30,7 @@ namespace ClientWPF
         private List<string> users = new List<string>();
         private List<string> messages = new List<string>();
         private System.Windows.Threading.DispatcherTimer dispatcherTimer;
+        private bool loginOk = false;
 
         public MainWindow()
         {
@@ -53,101 +54,94 @@ namespace ClientWPF
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            string name = textBox1.Text;
-            string message = textBox.Text;
-            data = LeRemot.SendMessage(name,message);
-            listBox.Items.Clear();
-            listBox1.Items.Clear();
-            messages = data.getMessages();
-            users = data.getUsers();
-            foreach (string n in messages)
+            if (loginOk)
             {
-                listBox1.Items.Add(n);
-            }
+                string name = unameIn.Text;
+                string message = messageIn.Text;
+                data = LeRemot.SendMessage(name, message);
+                userListBox.Items.Clear();
+                msgListBox.Items.Clear();
+                messages = data.getMessages();
+                users = data.getUsers();
+                foreach (string n in messages)
+                {
+                    msgListBox.Items.Add(n);
+                }
 
-            foreach (string n in users)
-            {
-                listBox.Items.Add(n);
+                foreach (string n in users)
+                {
+                    userListBox.Items.Add(n);
+                }
+                messageIn.Clear();
             }
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            string name = textBox1.Text;
-            data = LeRemot.Login(name);
-            if(data.error == true)
-            {
-                MessageBox.Show("Error login,please choose another user name and try one try");
-                return ;
-            }
+            string name = unameIn.Text;
 
+            if(LeRemot.Login(name) == false)
+            {
+                MessageBox.Show("Error login,please choose another user name and try again");
+                return;
+            }
+            loginOk = true;
+            data = LeRemot.SyncMessage();
             users = data.getUsers();
-            listBox.Items.Clear();
+            userListBox.Items.Clear();
             foreach (string n in users)
             {
-                listBox.Items.Add(n);
+                userListBox.Items.Add(n);
             }
 
-            textBox1.IsEnabled = false;
-            button.IsEnabled = true;
-            textBox.IsEnabled = true;
-            disconnect.IsEnabled = true;
-            dispatcherTimer.Start();
+            if (loginOk) {
+                loginBotton.IsEnabled = false;
+                unameIn.IsEnabled = false;
+                sendButton.IsEnabled = true;
+                messageIn.IsEnabled = true;
+                disconnect.IsEnabled = true;
+                dispatcherTimer.Start();
+            }
         }
 
-        private void checkBox_Checked(object sender, RoutedEventArgs e)
+        public void checkout(object sender, EventArgs e)
         {
-           
-            
-            
-            /* while (true)
-            {
-                System.Threading.Thread.Sleep(3000);
-                data = LeRemot.Fresh();
-                listBox.Items.Clear();
-                listBox1.Items.Clear();
+            if (loginOk) {
+                data = LeRemot.SyncMessage();
+                msgListBox.Items.Clear();
+                userListBox.Items.Clear();
                 messages = data.getMessages();
                 users = data.getUsers();
                 foreach (string n in messages)
                 {
-                    listBox1.Items.Add(n);
+                    msgListBox.Items.Add(n);
                 }
 
                 foreach (string n in users)
                 {
-                    listBox.Items.Add(n);
+                    userListBox.Items.Add(n);
                 }
-            }
-            */
-        }
-        public void checkout(object sender, EventArgs e)
-        {
-            data = LeRemot.Fresh();
-            listBox.Items.Clear();
-            listBox1.Items.Clear();
-            messages = data.getMessages();
-            users = data.getUsers();
-            foreach (string n in messages)
-            {
-                listBox1.Items.Add(n);
-            }
-
-            foreach (string n in users)
-            {
-                listBox.Items.Add(n);
             }
         }
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            string name = textBox1.Text;
-            LeRemot.Disconnect(name);
-            listBox.Items.Clear();
-            listBox1.Items.Clear();
-            textBox1.IsEnabled = true;
-            button.IsEnabled = false;
-            textBox.IsEnabled = false;
-            disconnect.IsEnabled = false;
-            dispatcherTimer.Stop();
+            string name = unameIn.Text;
+            if (LeRemot.Disconnect(name))
+            {
+                loginOk = false;
+                userListBox.Items.Clear();
+                msgListBox.Items.Clear();
+                loginBotton.IsEnabled = true;
+                disconnect.IsEnabled = false;
+                unameIn.IsEnabled = true;
+                sendButton.IsEnabled = false;
+                messageIn.IsEnabled = false;
+                dispatcherTimer.Stop();
+            }
+            else {
+                MessageBox.Show("log out failed. user is not connected.");
+            }
+            
             //System.Environment.Exit(1);
         }
     }

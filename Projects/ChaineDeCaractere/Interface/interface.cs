@@ -10,7 +10,6 @@ namespace RemotingInterface
     [Serializable]
     public class Data
     {
-        public bool error;
         public List<string> users;
         public List<string> messages;
 
@@ -18,7 +17,6 @@ namespace RemotingInterface
         {
             users = new List<string>();
             messages = new List<string>();
-            error = false;
         }
 
         public List<string> getUsers()
@@ -44,12 +42,9 @@ namespace RemotingInterface
     }
     public interface IRemotChaine
 	{
-        string Hello();
-
-        Data Fresh();
+        Data SyncMessage();
         Data SendMessage(string name,string message);
-        Data Login(string Username);
-        /* user disconnect. Return true if successful, false elsewise */
-        void Disconnect(string name);
+        bool Login(string Username);
+        bool Disconnect(string name);
     }
 }

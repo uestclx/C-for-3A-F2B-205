@@ -1,9 +1,0 @@
-\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Client\obj\Debug\Client.exe
-\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Client\obj\Debug\Client.pdb
-\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Client\bin\Debug\Client.exe
-\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Client\bin\Debug\Client.pdb
-\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Client\bin\Debug\Interface.dll
-\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Client\bin\Debug\Interface.pdb
-\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Client\obj\Debug\client.csprojResolveAssemblyReference.cache
-\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Client\obj\Debug\Client.Properties.Resources.resources
-\\campus.enst-bretagne.fr\homes\dshi\Visual Studio 2015\Projects\ChaineDeCaractere\Client\obj\Debug\client.csproj.GenerateResource.Cache

@@ -11,21 +11,21 @@ namespace remotServeur
 	/// Description résumée de demarreServeur.
 	/// </summary>
 		[Serializable]
-    public  class ChainePartagee{
-
-        
-            public static string hello = "chaine de depart";
-            public static Data data = new Data(); 
-        }
+    public  class ChainePartagee
+    {
+        public static string hello = "chaine de depart";
+    }
 
 
     public class Serveur  : MarshalByRefObject, RemotingInterface.IRemotChaine  
     {
-        
+        private static Data data;
+
         static void Main()
 		{
-			// Création d'un nouveau canal pour le transfert des données via un port 
-			TcpChannel canal = new TcpChannel(2333);
+            data = new Data();
+            // Création d'un nouveau canal pour le transfert des données via un port 
+            TcpChannel canal = new TcpChannel(2333);
 
 			// Le canal ainsi défini doit être Enregistré dans l'annuaire
 			ChannelServices.RegisterChannel(canal, false);
@@ -45,45 +45,57 @@ namespace remotServeur
 		{
 			return null;
 		}
-		
 
-		#region Membres de IRemotChaine
 
-		public string Hello()
-		{
-			// TODO : ajoutez l'implémentation de Serveur.Hello
-			return  ChainePartagee.hello;
-		}
+        #region Membres de IRemotChaine
 
-        public Data Login(string name)
+        public bool UserExsited(string name)
         {
-            ChainePartagee.data.error = false;
-            List<string> l = ChainePartagee.data.getUsers();
+            List<string> l = data.getUsers();
             foreach (string n in l)
             {
                 if (n.Equals(name))
                 {
-                    ChainePartagee.data.error = true;
-                    return ChainePartagee.data;
+                    return true;
                 }
             }
-            ChainePartagee.data.addUser(name);
-            return ChainePartagee.data;
+            return false;
         }
+
+        public bool Login(string name)
+        {
+            bool loginOk = UserExsited(name);
+            if (UserExsited(name))
+            {
+                return false;
+            } else
+            {
+                data.addUser(name);
+                return true;
+            }
+        }
+
         public Data SendMessage(string name,string message)
         {
-            ChainePartagee.data.addMessage(name, message);
-            return ChainePartagee.data;
+            data.addMessage(name, message);
+            return data;
         }
 
-        public Data Fresh()
+        public Data SyncMessage()
         {
-            return ChainePartagee.data;
+            return data;
         }
 
-        public void Disconnect(string name)
+        public bool Disconnect(string name)
         {
-            ChainePartagee.data.users.Remove(name);
+            if (UserExsited(name))
+            {
+                data.users.Remove(name);
+                return true;
+            }
+            else {
+                return false;
+            }
         }
 
         #endregion
